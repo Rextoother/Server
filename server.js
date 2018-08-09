@@ -55,6 +55,15 @@ app.get('/about', (req, res) => {
   })
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Our Projects',
+    project1: 'https://github.com/Rextoother/bs4starter',
+    project2: 'https://github.com/Rextoother/Server',
+    currentYear: currentYear
+  })
+})
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to handle request'
